@@ -69,16 +69,16 @@ str(dataActivityTrain)
 str(dataSubjectTrain)
 ```
 
-```{r}
+```{r, echo=TRUE}
 str(dataSubjectTest)
 ```
 
 
-```{r}
+```{r, echo=TRUE}
 str(dataFeaturesTest)
 ```
 
-```{r}
+```{r, echo=TRUE}
 str(dataFeaturesTrain)
 ```
 

@@ -118,13 +118,10 @@ names(MasterData)<-gsub("BodyBody", "Body", names(MasterData))
 library(plyr);
 library(data.table);
 library(dplyr);
+
 MasterDAta2 <- data.table(MasterData)
 #This takes the mean of every column broken down by participants and activities
 TidyData <- MasterDAta2[, lapply(.SD, mean), by = 'subject,activity']
 write.table(TidyData, file = "Tidy_Data.txt", row.names = FALSE)
 
-
-## Create Codebook
-
-library(knitr)
-knit2html("codebook.Rmd")
+##END
