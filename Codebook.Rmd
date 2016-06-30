@@ -112,6 +112,7 @@ MasterData <- cbind(dataFeatures, dataCombine)
 ```
 
 ************** Assignment 2 ***************
+
 Extracts only the measurements on the mean and standard deviation for each measurement
 Subset Name of Features by measurements on the mean and standard deviation
 i.e taken Names of Features with "mean()" or "std()"
@@ -133,6 +134,7 @@ str(MasterData)
 ```
 
 ************** Assignment 3 ***************
+
 Uses descriptive activity names to name the activities in the data set
 
 ```{r}
@@ -154,6 +156,7 @@ head(MasterData$activity, 30)
 
 
 ************** Assignment 4 ***************
+
 Appropriately labels the data set with descriptive variable names.
 In the former part, variables activity and subject and names of the activities 
 have been labelled using descriptive names.In this part, Names of Feteatures will 
