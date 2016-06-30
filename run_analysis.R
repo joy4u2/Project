@@ -7,7 +7,7 @@ setwd("~/Coursera/Data Science/Getting&Cleaning_Data/Project")
 
 if(!file.exists("./data")){dir.create("./data")}
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-download.file(fileUrl,destfile="./data/Dataset.zip",method="curl")
+download.file(fileUrl,destfile="./data/Dataset.zip")
 
 
 
@@ -80,8 +80,6 @@ MasterData<-subset(MasterData,select=selectedNames)
 #************** Assignment 3 ***************
 ## Uses descriptive activity names to name the activities in the data set
 
-##Changing the class is useful for replacing strings
-
 MasterData$activity <- as.character(MasterData$activity)
 MasterData$activity[MasterData$activity == 1] <- "WALKING"
 MasterData$activity[MasterData$activity == 2] <- "WALKING_UPSTAIRS"
@@ -117,10 +115,16 @@ names(MasterData)<-gsub("BodyBody", "Body", names(MasterData))
 ## From the data set in step 4, creates a second, independent tidy data set with the average 
 ## of each variable for each activity and each subject.
 
+library(plyr);
+library(data.table);
+library(dplyr);
 MasterDAta2 <- data.table(MasterData)
 #This takes the mean of every column broken down by participants and activities
 TidyData <- MasterDAta2[, lapply(.SD, mean), by = 'subject,activity']
 write.table(TidyData, file = "Tidy_Data.txt", row.names = FALSE)
 
 
+## Create Codebook
 
+library(knitr)
+knit2html("codebook.Rmd")
