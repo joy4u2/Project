@@ -2,18 +2,23 @@
 
 setwd("~/Coursera/Data Science/Getting&Cleaning_Data/Project")
 
+## Create a dir called "data"if it does not exist
+## Download the file and put it in the "data" directory
 
 if(!file.exists("./data")){dir.create("./data")}
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+download.file(fileUrl,destfile="./data/Dataset.zip",method="curl")
+
+
 
 ## Unzip the File
 
-unzip(zipfile="Dataset.zip")
+unzip(zipfile="./data/Dataset.zip", exdir="./data")
 
 ## unzipped files are in the folder "UCI HAR Dataset"
 
 ##  Get the list of the files
-path_rf <- file.path("UCI HAR Dataset")
+path_rf <- file.path("./data" , "UCI HAR Dataset")
 files<-list.files(path_rf, recursive=TRUE)
 files
 
