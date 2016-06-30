@@ -10,7 +10,7 @@ First set the working directory
 setwd("~/Coursera/Data Science/Getting&Cleaning_Data/Project")
 ```
 
-Create a dir called "data"if it does not exist
+Create a dir called "data" if it does not exist Create it
 Download the file and put it in the "data" directory
 
 ```{r}
@@ -159,12 +159,14 @@ In the former part, variables activity and subject and names of the activities
 have been labelled using descriptive names.In this part, Names of Feteatures will 
 labelled using descriptive variable names.
 
+<li>
 prefix t is replaced by time
 Acc is replaced by Accelerometer
 Gyro is replaced by Gyroscope
 prefix f is replaced by frequency
 Mag is replaced by Magnitude
 BodyBody is replaced by Body
+</li>
 
 ```{r}
 names(MasterData)<-gsub("^t", "time", names(MasterData))
