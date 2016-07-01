@@ -614,4 +614,11 @@ TidyData <- MasterDAta2[, lapply(.SD, mean), by = 'subject,activity']
 write.table(TidyData, file = "Tidy_Data.txt", row.names = FALSE)
 ```
 
+When we finish we end up with a dataset that consists of four variables. 
+
+* subject
+* activity
+* measurement
+* mean
+
 ##### Done!
