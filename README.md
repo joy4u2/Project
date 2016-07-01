@@ -26,6 +26,8 @@ Dependencies
 1. The R script assumes you have 'data.table' installed using install.packages("data.table")
 2. The R script assumes you have 'plyr' installed using install.packages("plyr")
 3. The R script assumes you have 'dplyr' installed using install.packages("dplyr")
+4. The R script assumes you have 'tidyr' installed using install.packages("tidyr")
+5. The R script assumes you have 'LaF' installed using install.packages("Laf")
 
 More Information
 
