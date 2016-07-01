@@ -5,7 +5,7 @@ Coursera Course: Getting and Cleaning Data
 
 Assignment Submission Files
 - [run_analysis.R] https://github.com/joy4u2/Project/blob/master/run_analysis.R
-- [README.md] 
+- [README.md] https://github.com/joy4u2/Project/blob/master/README.md
 - [CookBook.md]https://github.com/joy4u2/Project/blob/master/Codebook.md
 
 Instructions
