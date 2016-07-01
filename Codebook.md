@@ -601,6 +601,8 @@ Use the required Library
 library(plyr);
 library(data.table);
 library(dplyr);
+library(tidyr);
+library(LaF);
 ```
 
 ```{r}
