@@ -118,10 +118,12 @@ names(MasterData)<-gsub("BodyBody", "Body", names(MasterData))
 library(plyr);
 library(data.table);
 library(dplyr);
+library(tidyr);
+library(LaF);
 
 MasterDAta2 <- data.table(MasterData)
 #This takes the mean of every column broken down by participants and activities
-library(tidyr)
+
 TidyData <- group_by(MasterData, subject, activity) %>% summarise_all(funs(mean)) %>% gather(measurement, mean, -activity, -subject)
 
 write.table(TidyData, file = "Tidy_DaTa.txt", row.names = FALSE)
